@@ -1,0 +1,5 @@
+-- Solution 1: (301 ms, 0 B)
+
+SELECT SCORE, dense_rank() OVER (ORDER BY SCORE DESC) AS "RANK"
+FROM SCORES
+ORDER BY 2;
