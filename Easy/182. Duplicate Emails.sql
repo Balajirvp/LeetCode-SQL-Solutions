@@ -1,0 +1,10 @@
+-- Solution 1: (436 ms, 0 B)
+
+SELECT DISTINCT EMAIL
+FROM
+(
+    SELECT EMAIL, COUNT(*) AS CNT
+    FROM PERSON
+    GROUP BY 1
+    HAVING CNT > 1
+) A;
